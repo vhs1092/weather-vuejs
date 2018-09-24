@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-3">
 	<div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8">
+      <div class="col-12 col-md-12 col-lg-12">
           <form class="card card-sm">
               <div class="card-body row no-gutters align-items-center">
                   <div class="col-auto">
@@ -9,7 +9,7 @@
                   </div>
                   <!--end of col-->
                   <div class="col">
-                      <input class="form-control form-control-lg form-control-borderless" id="city" placeholder="City Name" v-model="search" required autocomplete="off">
+                      <input class="form-control form-control-lg form-control" id="city" placeholder="City Name" v-model="search" required autocomplete="off">
                   </div>
                   <!--end of col-->
                   <div class="col-auto">
@@ -17,11 +17,14 @@
                   </div>
                   <!--end of col-->
               </div>
+              <div class="row">
+              <div class="col-md-4 pt-3" v-for="city in cities" :key="city">
+               <weather :city="city"></weather>
+             </div>
+              </div>
           </form>
-          <div class="col-md-4 pt-3" v-for="city in cities" :key="city">
+          
       </div>
-      </div>
-      
       <!--end of col-->
   </div>
 </div>
@@ -38,6 +41,7 @@
 }
 </style>
 <script>
+import Weather from './Weather'
 export default {
   name: 'Home',
   props: ['message'],
@@ -54,6 +58,7 @@ export default {
     }
   },
   components: {
+    Weather
   }
 }
 </script>

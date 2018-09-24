@@ -9,6 +9,7 @@ Vue.use(VueResource)
 Vue.use(VueMoment)
 
 Vue.config.productionTip = false
+Vue.http.options.root = 'http://frontend_codeline_test.com/'
 
 /* eslint-disable no-new */
 new Vue({
