@@ -13,7 +13,7 @@
                   </div>
                   <!--end of col-->
                   <div class="col-auto">
-                      <button @click="sendData" class="btn btn-lg btn-success" type="submit">Search</button>
+                      <button @click="searchCity" class="btn btn-lg btn-success" type="submit">Search</button>
                   </div>
                   <!--end of col-->
               </div>
@@ -52,9 +52,8 @@ export default {
     }
   },
   methods: {
-    sendData: function () {
-      this.cities = []
-      this.cities.push(this.search)
+    searchCity () {
+      this.$router.push({name: 'Search', params: {city: this.search}})
     }
   },
   components: {
