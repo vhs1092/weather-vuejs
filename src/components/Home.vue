@@ -53,6 +53,7 @@ export default {
   },
   methods: {
     searchCity () {
+      //* Redirect to search view with city value
       this.$router.push({name: 'Search', params: {city: this.search}})
     }
   },
