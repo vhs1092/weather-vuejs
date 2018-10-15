@@ -1,7 +1,3 @@
-# frontend_codeline_test
-
-### Codeline Frontend Test
-### By Victor Samayoa - vhs1092@gmail.com
 
 ##Demo Video
 https://www.useloom.com/share/c896269c08114c88ba63751c49dee801
